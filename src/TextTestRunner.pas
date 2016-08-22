@@ -359,7 +359,7 @@ begin
   begin
     Result := Result + CRLF;
     Result := Result + PrintSettings(r);
-    Result := Result + format('OK: %d tests'+CRLF, [r.RunCount]);
+    Result := Result + format('OK: %d tests with %d checks'+CRLF, [r.RunCount, r.ChecksCalledCount]);
   end
   else
   begin
