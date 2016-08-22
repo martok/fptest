@@ -360,7 +360,8 @@ begin
     + '  Classes, TextTestRunner;' + LineEnding
     + LineEnding
     + 'begin' + LineEnding
-    + '  RunRegisteredTests;' + LineEnding
+    + '  if not RunRegisteredTests.WasSuccessful then' + LineEnding
+    + '    ExitCode:= 1;' + LineEnding
     + 'end.' + LineEnding
   ;
 
